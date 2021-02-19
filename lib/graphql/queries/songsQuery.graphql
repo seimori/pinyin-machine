@@ -1,0 +1,11 @@
+fragment song on Song {
+	id
+	youtubeIframe
+	lyrics
+}
+
+query songsQuery {
+	songs(stage: DRAFT) {
+		...song
+	}
+}
