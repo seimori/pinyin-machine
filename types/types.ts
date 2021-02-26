@@ -1202,7 +1202,8 @@ export type Song = Node & {
   updatedAt: Scalars['DateTime'];
   /** The time the document was published. Null on documents in draft stage. */
   publishedAt?: Maybe<Scalars['DateTime']>;
-  youtubeIframe?: Maybe<Scalars['String']>;
+  title: Scalars['String'];
+  youtubeId?: Maybe<Scalars['String']>;
   lyrics?: Maybe<Scalars['String']>;
   /** List of Song versions */
   history: Array<Version>;
@@ -1235,7 +1236,8 @@ export type SongConnection = {
 export type SongCreateInput = {
   createdAt?: Maybe<Scalars['DateTime']>;
   updatedAt?: Maybe<Scalars['DateTime']>;
-  youtubeIframe?: Maybe<Scalars['String']>;
+  title: Scalars['String'];
+  youtubeId?: Maybe<Scalars['String']>;
   lyrics?: Maybe<Scalars['String']>;
 };
 
@@ -1322,25 +1324,44 @@ export type SongManyWhereInput = {
   publishedAt_gt?: Maybe<Scalars['DateTime']>;
   /** All values greater than or equal the given value. */
   publishedAt_gte?: Maybe<Scalars['DateTime']>;
-  youtubeIframe?: Maybe<Scalars['String']>;
+  title?: Maybe<Scalars['String']>;
   /** All values that are not equal to given value. */
-  youtubeIframe_not?: Maybe<Scalars['String']>;
+  title_not?: Maybe<Scalars['String']>;
   /** All values that are contained in given list. */
-  youtubeIframe_in?: Maybe<Array<Scalars['String']>>;
+  title_in?: Maybe<Array<Scalars['String']>>;
   /** All values that are not contained in given list. */
-  youtubeIframe_not_in?: Maybe<Array<Scalars['String']>>;
+  title_not_in?: Maybe<Array<Scalars['String']>>;
   /** All values containing the given string. */
-  youtubeIframe_contains?: Maybe<Scalars['String']>;
+  title_contains?: Maybe<Scalars['String']>;
   /** All values not containing the given string. */
-  youtubeIframe_not_contains?: Maybe<Scalars['String']>;
+  title_not_contains?: Maybe<Scalars['String']>;
   /** All values starting with the given string. */
-  youtubeIframe_starts_with?: Maybe<Scalars['String']>;
+  title_starts_with?: Maybe<Scalars['String']>;
   /** All values not starting with the given string. */
-  youtubeIframe_not_starts_with?: Maybe<Scalars['String']>;
+  title_not_starts_with?: Maybe<Scalars['String']>;
   /** All values ending with the given string. */
-  youtubeIframe_ends_with?: Maybe<Scalars['String']>;
+  title_ends_with?: Maybe<Scalars['String']>;
   /** All values not ending with the given string */
-  youtubeIframe_not_ends_with?: Maybe<Scalars['String']>;
+  title_not_ends_with?: Maybe<Scalars['String']>;
+  youtubeId?: Maybe<Scalars['String']>;
+  /** All values that are not equal to given value. */
+  youtubeId_not?: Maybe<Scalars['String']>;
+  /** All values that are contained in given list. */
+  youtubeId_in?: Maybe<Array<Scalars['String']>>;
+  /** All values that are not contained in given list. */
+  youtubeId_not_in?: Maybe<Array<Scalars['String']>>;
+  /** All values containing the given string. */
+  youtubeId_contains?: Maybe<Scalars['String']>;
+  /** All values not containing the given string. */
+  youtubeId_not_contains?: Maybe<Scalars['String']>;
+  /** All values starting with the given string. */
+  youtubeId_starts_with?: Maybe<Scalars['String']>;
+  /** All values not starting with the given string. */
+  youtubeId_not_starts_with?: Maybe<Scalars['String']>;
+  /** All values ending with the given string. */
+  youtubeId_ends_with?: Maybe<Scalars['String']>;
+  /** All values not ending with the given string */
+  youtubeId_not_ends_with?: Maybe<Scalars['String']>;
   lyrics?: Maybe<Scalars['String']>;
   /** All values that are not equal to given value. */
   lyrics_not?: Maybe<Scalars['String']>;
@@ -1371,19 +1392,23 @@ export enum SongOrderByInput {
   UpdatedAtDesc = 'updatedAt_DESC',
   PublishedAtAsc = 'publishedAt_ASC',
   PublishedAtDesc = 'publishedAt_DESC',
-  YoutubeIframeAsc = 'youtubeIframe_ASC',
-  YoutubeIframeDesc = 'youtubeIframe_DESC',
+  TitleAsc = 'title_ASC',
+  TitleDesc = 'title_DESC',
+  YoutubeIdAsc = 'youtubeId_ASC',
+  YoutubeIdDesc = 'youtubeId_DESC',
   LyricsAsc = 'lyrics_ASC',
   LyricsDesc = 'lyrics_DESC'
 }
 
 export type SongUpdateInput = {
-  youtubeIframe?: Maybe<Scalars['String']>;
+  title?: Maybe<Scalars['String']>;
+  youtubeId?: Maybe<Scalars['String']>;
   lyrics?: Maybe<Scalars['String']>;
 };
 
 export type SongUpdateManyInput = {
-  youtubeIframe?: Maybe<Scalars['String']>;
+  title?: Maybe<Scalars['String']>;
+  youtubeId?: Maybe<Scalars['String']>;
   lyrics?: Maybe<Scalars['String']>;
 };
 
@@ -1489,25 +1514,44 @@ export type SongWhereInput = {
   publishedAt_gt?: Maybe<Scalars['DateTime']>;
   /** All values greater than or equal the given value. */
   publishedAt_gte?: Maybe<Scalars['DateTime']>;
-  youtubeIframe?: Maybe<Scalars['String']>;
+  title?: Maybe<Scalars['String']>;
   /** All values that are not equal to given value. */
-  youtubeIframe_not?: Maybe<Scalars['String']>;
+  title_not?: Maybe<Scalars['String']>;
   /** All values that are contained in given list. */
-  youtubeIframe_in?: Maybe<Array<Scalars['String']>>;
+  title_in?: Maybe<Array<Scalars['String']>>;
   /** All values that are not contained in given list. */
-  youtubeIframe_not_in?: Maybe<Array<Scalars['String']>>;
+  title_not_in?: Maybe<Array<Scalars['String']>>;
   /** All values containing the given string. */
-  youtubeIframe_contains?: Maybe<Scalars['String']>;
+  title_contains?: Maybe<Scalars['String']>;
   /** All values not containing the given string. */
-  youtubeIframe_not_contains?: Maybe<Scalars['String']>;
+  title_not_contains?: Maybe<Scalars['String']>;
   /** All values starting with the given string. */
-  youtubeIframe_starts_with?: Maybe<Scalars['String']>;
+  title_starts_with?: Maybe<Scalars['String']>;
   /** All values not starting with the given string. */
-  youtubeIframe_not_starts_with?: Maybe<Scalars['String']>;
+  title_not_starts_with?: Maybe<Scalars['String']>;
   /** All values ending with the given string. */
-  youtubeIframe_ends_with?: Maybe<Scalars['String']>;
+  title_ends_with?: Maybe<Scalars['String']>;
   /** All values not ending with the given string */
-  youtubeIframe_not_ends_with?: Maybe<Scalars['String']>;
+  title_not_ends_with?: Maybe<Scalars['String']>;
+  youtubeId?: Maybe<Scalars['String']>;
+  /** All values that are not equal to given value. */
+  youtubeId_not?: Maybe<Scalars['String']>;
+  /** All values that are contained in given list. */
+  youtubeId_in?: Maybe<Array<Scalars['String']>>;
+  /** All values that are not contained in given list. */
+  youtubeId_not_in?: Maybe<Array<Scalars['String']>>;
+  /** All values containing the given string. */
+  youtubeId_contains?: Maybe<Scalars['String']>;
+  /** All values not containing the given string. */
+  youtubeId_not_contains?: Maybe<Scalars['String']>;
+  /** All values starting with the given string. */
+  youtubeId_starts_with?: Maybe<Scalars['String']>;
+  /** All values not starting with the given string. */
+  youtubeId_not_starts_with?: Maybe<Scalars['String']>;
+  /** All values ending with the given string. */
+  youtubeId_ends_with?: Maybe<Scalars['String']>;
+  /** All values not ending with the given string */
+  youtubeId_not_ends_with?: Maybe<Scalars['String']>;
   lyrics?: Maybe<Scalars['String']>;
   /** All values that are not equal to given value. */
   lyrics_not?: Maybe<Scalars['String']>;
@@ -1656,7 +1700,20 @@ export enum _SystemDateTimeFieldVariation {
 
 export type SongFragment = (
   { __typename?: 'Song' }
-  & Pick<Song, 'id' | 'youtubeIframe' | 'lyrics'>
+  & Pick<Song, 'id' | 'youtubeId' | 'lyrics' | 'title'>
+);
+
+export type SongQueryQueryVariables = Exact<{
+  id: Scalars['ID'];
+}>;
+
+
+export type SongQueryQuery = (
+  { __typename?: 'Query' }
+  & { song?: Maybe<(
+    { __typename?: 'Song' }
+    & SongFragment
+  )> }
 );
 
 export type SongsQueryQueryVariables = Exact<{ [key: string]: never; }>;
@@ -1670,13 +1727,32 @@ export type SongsQueryQuery = (
   )> }
 );
 
+export type SongsMetaQueryQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type SongsMetaQueryQuery = (
+  { __typename?: 'Query' }
+  & { songs: Array<(
+    { __typename?: 'Song' }
+    & Pick<Song, 'id'>
+  )> }
+);
+
 export const SongFragmentDoc = gql`
     fragment song on Song {
   id
-  youtubeIframe
+  youtubeId
   lyrics
+  title
 }
     `;
+export const SongQueryDocument = gql`
+    query songQuery($id: ID!) {
+  song(where: {id: $id}, stage: DRAFT) {
+    ...song
+  }
+}
+    ${SongFragmentDoc}`;
 export const SongsQueryDocument = gql`
     query songsQuery {
   songs(stage: DRAFT) {
@@ -1684,6 +1760,13 @@ export const SongsQueryDocument = gql`
   }
 }
     ${SongFragmentDoc}`;
+export const SongsMetaQueryDocument = gql`
+    query songsMetaQuery {
+  songs(stage: DRAFT) {
+    id
+  }
+}
+    `;
 
 export type SdkFunctionWrapper = <T>(action: () => Promise<T>) => Promise<T>;
 
@@ -1691,8 +1774,14 @@ export type SdkFunctionWrapper = <T>(action: () => Promise<T>) => Promise<T>;
 const defaultWrapper: SdkFunctionWrapper = sdkFunction => sdkFunction();
 export function getSdk(client: GraphQLClient, withWrapper: SdkFunctionWrapper = defaultWrapper) {
   return {
+    songQuery(variables: SongQueryQueryVariables, requestHeaders?: Dom.RequestInit["headers"]): Promise<SongQueryQuery> {
+      return withWrapper(() => client.request<SongQueryQuery>(print(SongQueryDocument), variables, requestHeaders));
+    },
     songsQuery(variables?: SongsQueryQueryVariables, requestHeaders?: Dom.RequestInit["headers"]): Promise<SongsQueryQuery> {
       return withWrapper(() => client.request<SongsQueryQuery>(print(SongsQueryDocument), variables, requestHeaders));
+    },
+    songsMetaQuery(variables?: SongsMetaQueryQueryVariables, requestHeaders?: Dom.RequestInit["headers"]): Promise<SongsMetaQueryQuery> {
+      return withWrapper(() => client.request<SongsMetaQueryQuery>(print(SongsMetaQueryDocument), variables, requestHeaders));
     }
   };
 }

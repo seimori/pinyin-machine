@@ -1,0 +1,18 @@
+fragment song on Song {
+	id
+	youtubeId
+	lyrics
+	title
+}
+
+query songQuery($id: ID!) {
+	song(where: { id: $id }, stage: DRAFT) {
+		...song
+	}
+}
+
+query songsQuery {
+	songs(stage: DRAFT) {
+		...song
+	}
+}

@@ -1,22 +1,30 @@
 import React from 'react'
 import { SongFragment } from '../../types/types'
+import Link from 'next/link'
 import styles from './Index.module.scss'
-import parse from 'html-react-parser'
 
 export const IndexContainer = ({ songs }: { songs: SongFragment[] }) => {
-	const song = songs[0]
 	return (
-		<main>
-			{parse(song.youtubeIframe)}
-			<p>{song.lyrics}</p>
-			{/* <iframe
-				width='560'
-				height='315'
-				src='https://www.youtube.com/embed/w_JBF4CJ-9M'
-				frameborder='0'
-				allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-				allowfullscreen
-			></iframe> */}
+		<main className={styles.indexContainer}>
+			<h1>Pinyin Machine</h1>
+			<ul className={styles.songsList}>
+				{songs.map((song) => (
+					<li key={song.id} className={styles.songItem}>
+						<Link href={`/${song.id}`}>
+							<a>
+								<figure>
+									<img
+										src={`https://img.youtube.com/vi/${song.youtubeId}/hqdefault.jpg`}
+									/>
+									<figcaption className={styles.songTitle}>
+										{song.title}
+									</figcaption>
+								</figure>
+							</a>
+						</Link>
+					</li>
+				))}
+			</ul>
 		</main>
 	)
 }

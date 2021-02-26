@@ -7985,7 +7985,23 @@
             "deprecationReason": null
           },
           {
-            "name": "youtubeIframe",
+            "name": "title",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "youtubeId",
             "description": null,
             "args": [],
             "type": {
@@ -8187,7 +8203,23 @@
             "deprecationReason": null
           },
           {
-            "name": "youtubeIframe",
+            "name": "title",
+            "description": null,
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "youtubeId",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -8809,7 +8841,7 @@
             "deprecationReason": null
           },
           {
-            "name": "youtubeIframe",
+            "name": "title",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -8821,7 +8853,7 @@
             "deprecationReason": null
           },
           {
-            "name": "youtubeIframe_not",
+            "name": "title_not",
             "description": "All values that are not equal to given value.",
             "type": {
               "kind": "SCALAR",
@@ -8833,7 +8865,7 @@
             "deprecationReason": null
           },
           {
-            "name": "youtubeIframe_in",
+            "name": "title_in",
             "description": "All values that are contained in given list.",
             "type": {
               "kind": "LIST",
@@ -8853,7 +8885,7 @@
             "deprecationReason": null
           },
           {
-            "name": "youtubeIframe_not_in",
+            "name": "title_not_in",
             "description": "All values that are not contained in given list.",
             "type": {
               "kind": "LIST",
@@ -8873,7 +8905,7 @@
             "deprecationReason": null
           },
           {
-            "name": "youtubeIframe_contains",
+            "name": "title_contains",
             "description": "All values containing the given string.",
             "type": {
               "kind": "SCALAR",
@@ -8885,7 +8917,7 @@
             "deprecationReason": null
           },
           {
-            "name": "youtubeIframe_not_contains",
+            "name": "title_not_contains",
             "description": "All values not containing the given string.",
             "type": {
               "kind": "SCALAR",
@@ -8897,7 +8929,7 @@
             "deprecationReason": null
           },
           {
-            "name": "youtubeIframe_starts_with",
+            "name": "title_starts_with",
             "description": "All values starting with the given string.",
             "type": {
               "kind": "SCALAR",
@@ -8909,7 +8941,7 @@
             "deprecationReason": null
           },
           {
-            "name": "youtubeIframe_not_starts_with",
+            "name": "title_not_starts_with",
             "description": "All values not starting with the given string.",
             "type": {
               "kind": "SCALAR",
@@ -8921,7 +8953,7 @@
             "deprecationReason": null
           },
           {
-            "name": "youtubeIframe_ends_with",
+            "name": "title_ends_with",
             "description": "All values ending with the given string.",
             "type": {
               "kind": "SCALAR",
@@ -8933,7 +8965,143 @@
             "deprecationReason": null
           },
           {
-            "name": "youtubeIframe_not_ends_with",
+            "name": "title_not_ends_with",
+            "description": "All values not ending with the given string",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "youtubeId",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "youtubeId_not",
+            "description": "All values that are not equal to given value.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "youtubeId_in",
+            "description": "All values that are contained in given list.",
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "youtubeId_not_in",
+            "description": "All values that are not contained in given list.",
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "youtubeId_contains",
+            "description": "All values containing the given string.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "youtubeId_not_contains",
+            "description": "All values not containing the given string.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "youtubeId_starts_with",
+            "description": "All values starting with the given string.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "youtubeId_not_starts_with",
+            "description": "All values not starting with the given string.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "youtubeId_ends_with",
+            "description": "All values ending with the given string.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "youtubeId_not_ends_with",
             "description": "All values not ending with the given string",
             "type": {
               "kind": "SCALAR",
@@ -9142,13 +9310,25 @@
             "deprecationReason": null
           },
           {
-            "name": "youtubeIframe_ASC",
+            "name": "title_ASC",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "youtubeIframe_DESC",
+            "name": "title_DESC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "youtubeId_ASC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "youtubeId_DESC",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -9175,7 +9355,19 @@
         "fields": null,
         "inputFields": [
           {
-            "name": "youtubeIframe",
+            "name": "title",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "youtubeId",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -9210,7 +9402,19 @@
         "fields": null,
         "inputFields": [
           {
-            "name": "youtubeIframe",
+            "name": "title",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "youtubeId",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -9961,7 +10165,7 @@
             "deprecationReason": null
           },
           {
-            "name": "youtubeIframe",
+            "name": "title",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -9973,7 +10177,7 @@
             "deprecationReason": null
           },
           {
-            "name": "youtubeIframe_not",
+            "name": "title_not",
             "description": "All values that are not equal to given value.",
             "type": {
               "kind": "SCALAR",
@@ -9985,7 +10189,7 @@
             "deprecationReason": null
           },
           {
-            "name": "youtubeIframe_in",
+            "name": "title_in",
             "description": "All values that are contained in given list.",
             "type": {
               "kind": "LIST",
@@ -10005,7 +10209,7 @@
             "deprecationReason": null
           },
           {
-            "name": "youtubeIframe_not_in",
+            "name": "title_not_in",
             "description": "All values that are not contained in given list.",
             "type": {
               "kind": "LIST",
@@ -10025,7 +10229,7 @@
             "deprecationReason": null
           },
           {
-            "name": "youtubeIframe_contains",
+            "name": "title_contains",
             "description": "All values containing the given string.",
             "type": {
               "kind": "SCALAR",
@@ -10037,7 +10241,7 @@
             "deprecationReason": null
           },
           {
-            "name": "youtubeIframe_not_contains",
+            "name": "title_not_contains",
             "description": "All values not containing the given string.",
             "type": {
               "kind": "SCALAR",
@@ -10049,7 +10253,7 @@
             "deprecationReason": null
           },
           {
-            "name": "youtubeIframe_starts_with",
+            "name": "title_starts_with",
             "description": "All values starting with the given string.",
             "type": {
               "kind": "SCALAR",
@@ -10061,7 +10265,7 @@
             "deprecationReason": null
           },
           {
-            "name": "youtubeIframe_not_starts_with",
+            "name": "title_not_starts_with",
             "description": "All values not starting with the given string.",
             "type": {
               "kind": "SCALAR",
@@ -10073,7 +10277,7 @@
             "deprecationReason": null
           },
           {
-            "name": "youtubeIframe_ends_with",
+            "name": "title_ends_with",
             "description": "All values ending with the given string.",
             "type": {
               "kind": "SCALAR",
@@ -10085,7 +10289,143 @@
             "deprecationReason": null
           },
           {
-            "name": "youtubeIframe_not_ends_with",
+            "name": "title_not_ends_with",
+            "description": "All values not ending with the given string",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "youtubeId",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "youtubeId_not",
+            "description": "All values that are not equal to given value.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "youtubeId_in",
+            "description": "All values that are contained in given list.",
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "youtubeId_not_in",
+            "description": "All values that are not contained in given list.",
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "youtubeId_contains",
+            "description": "All values containing the given string.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "youtubeId_not_contains",
+            "description": "All values not containing the given string.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "youtubeId_starts_with",
+            "description": "All values starting with the given string.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "youtubeId_not_starts_with",
+            "description": "All values not starting with the given string.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "youtubeId_ends_with",
+            "description": "All values ending with the given string.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "youtubeId_not_ends_with",
             "description": "All values not ending with the given string",
             "type": {
               "kind": "SCALAR",

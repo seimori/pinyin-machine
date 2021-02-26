@@ -1,3 +1,19 @@
-.mainTitle {
-	text-align: center;
+.indexContainer {
+	margin: 2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.songsList {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 2rem;
+	.songItem:hover {
+		opacity: 60%;
+	}
+	.songTitle {
+		font-size: 24px;
+		text-align: center;
+	}
 }
